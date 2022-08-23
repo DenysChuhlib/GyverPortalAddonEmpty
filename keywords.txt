@@ -1,0 +1,22 @@
+#######################################
+# Syntax Coloring Map For GyverPortalAddonEmpty
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+GyverPortalAddonEmpty	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+GP_ADDON	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+GP_ADDON_LIGHT	LITERAL1
+GP_ADDON_DARK	LITERAL1
