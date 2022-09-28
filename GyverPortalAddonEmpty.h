@@ -17,9 +17,10 @@ const char GP_ADDON_DARK[] PROGMEM =
 "</style>\n";
 
 struct BuilderADDON {
-	void BUILD_BEGIN(const String& page_name = "ESP", uint16_t width = 350) {
+	void BUILD_BEGIN(const String& page_name = "ESP", uint16_t width = 350, bool local = false) {
 		PAGE_BEGIN(page_name);
-		GP.JS_TOP();
+		if (local) GP.JS_TOP_FILE();
+		else GP.JS_TOP();
 		GP.PAGE_BLOCK_BEGIN(width);
 	}
 	
@@ -32,7 +33,7 @@ struct BuilderADDON {
 		s += page_name;
 		s += F("</title>\n");
 		s += F("</head><body>\n");	
-		GP.CUSTOM(s);
+		GP.SEND(s);
 	}
 };
 BuilderADDON GP_ADDON;
